@@ -78,7 +78,7 @@ function handler (method) {
   var response = (method.responses || {})[statusCode] || {}
   var bodies = response.body || {}
   var headers = {
-                  'Access-Control-Allow-Origin': '*'
+                  'Access-Control-Allow-Origin': '*',
                   'Access-Control-Request-Method': '*',
                   'Access-Control-Allow-Methods': 'OPTIONS, GET, DELET, POST, PUT',
                   'Access-Control-Allow-Headers': '*'
