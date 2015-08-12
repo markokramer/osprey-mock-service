@@ -77,7 +77,13 @@ function handler (method) {
   var statusCode = getStatusCode(method)
   var response = (method.responses || {})[statusCode] || {}
   var bodies = response.body || {}
-  var headers = {'Access-Control-Allow-Origin': '*'}
+  var headers = {
+                  'Access-Control-Allow-Origin': '*'
+                  'Access-Control-Request-Method': '*',
+                  'Access-Control-Allow-Methods': 'OPTIONS, GET, DELET, POST, PUT',
+                  'Access-Control-Allow-Headers': '*'
+                }
+  
   var types = Object.keys(bodies)
 
   // Set up the default response headers.
