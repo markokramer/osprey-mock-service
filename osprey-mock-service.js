@@ -79,9 +79,9 @@ function handler (method) {
   var bodies = response.body || {}
   var headers = {
                   'Access-Control-Allow-Origin': '*',
-                  'Access-Control-Request-Method': '*',
-                  'Access-Control-Allow-Methods': 'OPTIONS, GET, DELET, POST, PUT',
-                  'Access-Control-Allow-Headers': '*'
+                  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+                  'Access-Control-Allow-Methods': 'POST, PUT, DELETE, GET, OPTIONS',
+                  'Access-Control-Request-Method': '*'
                 }
   
   var types = Object.keys(bodies)
