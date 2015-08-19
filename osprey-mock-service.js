@@ -77,12 +77,7 @@ function handler (method) {
   var statusCode = getStatusCode(method)
   var response = (method.responses || {})[statusCode] || {}
   var bodies = response.body || {}
-  var headers = {
-                  'Access-Control-Allow-Origin': '*',
-                  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-                  'Access-Control-Allow-Methods': 'POST, PUT, DELETE, GET, OPTIONS',
-                  'Access-Control-Request-Method': '*'
-                }
+  var headers = {}
   
   var types = Object.keys(bodies)
 
